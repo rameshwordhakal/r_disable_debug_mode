@@ -11,7 +11,10 @@ odoo.define('r_disable_debug_mode.hideDebugManager', function (require) {
           xmlDependencies: (DebugManager.prototype.xmlDependencies || []).concat(["/r_disable_debug_mode/static/src/xml/hide_debug.xml"]),
           //Leave the debug mode automatically if current user is not an administrator.
           start: function () {
-            this._super();
+            this.leave_debug_mode();
+          },
+          // Leave the debug mode automatically if non admin user somehow gets access to menu and click on it.
+          perform_callback: function (evt) {
             this.leave_debug_mode();
           }
         });
