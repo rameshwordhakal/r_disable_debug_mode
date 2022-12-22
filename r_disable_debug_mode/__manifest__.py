@@ -3,7 +3,7 @@
     'name': "Disable Debug Mode",
 
     'summary': """
-        Module to disable debug mode""",
+        Module to disable debug mode for non-admin users.""",
 
     'description': """
         This module can be used in production server to disable debug mode for non-administrator users.
@@ -12,12 +12,16 @@
 
     'author': "Rameshwor Dhakal",
 
-    'category': 'Uncategorized',
+    'category': 'Hidden',
     'version': '1.0',
+    'license': 'AGPL-3',
 
     'depends': ['base', 'web'],
 
     'data': [
         'views/templates.xml',
+    ],
+    'images': [
+        'static/description/banner.png',
     ],
 }
