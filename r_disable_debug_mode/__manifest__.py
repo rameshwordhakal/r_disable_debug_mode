@@ -12,7 +12,6 @@
 
     'author': "Rameshwor Dhakal",
 
-    'category': 'Hidden',
     'version': '1.0',
     'license': 'AGPL-3',
 
